@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>app.san</groupId>
-	<artifactId>serviciosAltoNivel</artifactId>
+	<artifactId>servicios-alto-nivel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>serviciosNpa</name>
 	<description>Componente de servicios Web para NPA</description>

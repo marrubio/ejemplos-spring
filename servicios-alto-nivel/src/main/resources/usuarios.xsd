@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://san.app/servicios/ws/usuarios"
+           targetNamespace="http://san.app/servicios/ws/usuarios" elementFormDefault="qualified">
+
+    <xs:element name="getUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:usuario"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="usuario">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="login" type="xs:string"/>
+            <xs:element name="password" type="xs:string"/>
+            <xs:element name="tipo" type="tns:tipoUsuario"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoUsuario">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Admin"/>
+            <xs:enumeration value="User"/>
+            <xs:enumeration value="dev"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
