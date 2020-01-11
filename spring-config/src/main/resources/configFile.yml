@@ -1,0 +1,10 @@
+autor: Mario Rubio
+empresa: Empresa de prueba
+
+usuarios:
+  admin:
+    nombre: admin
+    clave: admin123
+  mario:
+    nombre: mario
+    clave: mario123
