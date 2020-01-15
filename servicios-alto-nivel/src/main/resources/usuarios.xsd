@@ -1,5 +1,6 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://san.app/servicios/ws/usuarios"
-           targetNamespace="http://san.app/servicios/ws/usuarios" elementFormDefault="qualified">
+<xs:schema 	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+			xmlns:tns="http://san.app/servicios/ws/usuarios"
+           	targetNamespace="http://san.app/servicios/ws/usuarios" elementFormDefault="qualified">
 
     <xs:element name="getUserRequest">
         <xs:complexType>
@@ -16,6 +17,14 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    
+    <xs:element name="obtenerPrincipal">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>     
 
     <xs:complexType name="usuario">
         <xs:sequence>
