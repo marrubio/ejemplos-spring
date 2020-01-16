@@ -1,5 +1,6 @@
 package app.san.servicios.config;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +25,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
   }
 
   @Bean(name = "usuarios")
-  public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema usuariosSchema) {
+  public DefaultWsdl11Definition usuarios(XsdSchema usuariosSchema) {
     DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
     wsdl11Definition.setPortTypeName("UsersPort");
     wsdl11Definition.setLocationUri("/ws/usuarios");
@@ -38,4 +39,10 @@ public class WebServiceConfig extends WsConfigurerAdapter {
   public XsdSchema usuariosSchema() {
     return new SimpleXsdSchema(new ClassPathResource("usuarios.xsd"));
   }
+
+  @Bean
+  public ModelMapper modelMapper() {
+      return new ModelMapper();
+  }
+  
 }
