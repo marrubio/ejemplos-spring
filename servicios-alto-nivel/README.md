@@ -17,3 +17,9 @@ http://localhost:8080/ws/usuarios
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+```xml
+   <soapenv:Body>
+      <gs:obtenerPrincipal><gs:name>admin</gs:name></gs:obtenerPrincipal>
+   </soapenv:Body>
+```
